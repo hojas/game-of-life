@@ -16,7 +16,7 @@ const route = useRoute()
 const speed = ref(200)
 const isRunning = ref(false)
 const generation = ref(0)
-const cellSize = ref(16)
+const cellSize = ref(8)
 let intervalId: number | null = null
 
 const gridSize = ref(20)
@@ -29,42 +29,42 @@ const games: GamePreset[] = [
     name: 'Glider',
     description: 'A simple spaceship that moves diagonally across the grid',
     pattern: createGliderPattern(),
-    gridSize: 20,
+    gridSize: 100,
   },
   {
     id: 'blinker',
     name: 'Blinker',
     description: 'A simple oscillator that alternates between two states',
     pattern: createBlinkerPattern(),
-    gridSize: 10,
+    gridSize: 100,
   },
   {
     id: 'beacon',
     name: 'Beacon',
     description: 'A 4-cell oscillator with a period of 2',
     pattern: createBeaconPattern(),
-    gridSize: 10,
+    gridSize: 100,
   },
   {
     id: 'pulsar',
     name: 'Pulsar',
     description: 'A larger oscillator with a period of 3',
     pattern: createPulsarPattern(),
-    gridSize: 20,
+    gridSize: 100,
   },
   {
     id: 'spaceship',
     name: 'Spaceship',
     description: 'A lightweight spaceship that moves horizontally',
     pattern: createSpaceshipPattern(),
-    gridSize: 20,
+    gridSize: 100,
   },
   {
     id: 'gosper-glider-gun',
     name: 'Gosper Glider Gun',
     description: 'A pattern that continuously produces gliders',
     pattern: createGosperGliderGunPattern(),
-    gridSize: 30,
+    gridSize: 100,
   },
 ]
 
@@ -76,9 +76,9 @@ const game = computed(() => {
 
 // 创建滑翔机模式
 function createGliderPattern(): boolean[] {
-  const pattern = Array.from({ length: 20 * 20 }).fill(false)
-  const startRow = 5
-  const startCol = 5
+  const pattern = Array.from({ length: 100 * 100 }).fill(false)
+  const startRow = 45
+  const startCol = 45
 
   // 滑翔机形状
   const glider = [
@@ -90,7 +90,7 @@ function createGliderPattern(): boolean[] {
   ]
 
   for (const [row, col] of glider) {
-    const index = (startRow + row) * 20 + (startCol + col)
+    const index = (startRow + row) * 100 + (startCol + col)
     pattern[index] = true
   }
 
@@ -99,13 +99,13 @@ function createGliderPattern(): boolean[] {
 
 // 创建闪烁器模式
 function createBlinkerPattern(): boolean[] {
-  const pattern = Array.from({ length: 10 * 10 }).fill(false)
-  const startRow = 4
-  const startCol = 4
+  const pattern = Array.from({ length: 100 * 100 }).fill(false)
+  const startRow = 49
+  const startCol = 48
 
   // 闪烁器形状
   for (let i = 0; i < 3; i++) {
-    const index = startRow * 10 + (startCol + i)
+    const index = startRow * 100 + (startCol + i)
     pattern[index] = true
   }
 
@@ -114,20 +114,20 @@ function createBlinkerPattern(): boolean[] {
 
 // 创建信标模式
 function createBeaconPattern(): boolean[] {
-  const pattern = Array.from({ length: 10 * 10 }).fill(false)
+  const pattern = Array.from({ length: 100 * 100 }).fill(false)
 
   // 信标形状
   const beacon = [
-    [2, 2],
-    [2, 3],
-    [3, 2],
-    [4, 5],
-    [5, 4],
-    [5, 5],
+    [48, 48],
+    [48, 49],
+    [49, 48],
+    [50, 51],
+    [51, 50],
+    [51, 51],
   ]
 
   for (const [row, col] of beacon) {
-    const index = row * 10 + col
+    const index = row * 100 + col
     pattern[index] = true
   }
 
@@ -136,9 +136,9 @@ function createBeaconPattern(): boolean[] {
 
 // 创建脉冲星模式
 function createPulsarPattern(): boolean[] {
-  const pattern = Array.from({ length: 20 * 20 }).fill(false)
-  const centerRow = 10
-  const centerCol = 10
+  const pattern = Array.from({ length: 100 * 100 }).fill(false)
+  const centerRow = 50
+  const centerCol = 50
 
   // 脉冲星形状
   const pulsar = [
@@ -199,7 +199,7 @@ function createPulsarPattern(): boolean[] {
   ]
 
   for (const [row, col] of pulsar) {
-    const index = (centerRow + row - 8) * 20 + (centerCol + col - 8)
+    const index = (centerRow + row - 8) * 100 + (centerCol + col - 8)
     pattern[index] = true
   }
 
@@ -208,9 +208,9 @@ function createPulsarPattern(): boolean[] {
 
 // 创建宇宙飞船模式
 function createSpaceshipPattern(): boolean[] {
-  const pattern = Array.from({ length: 20 * 20 }).fill(false)
-  const startRow = 10
-  const startCol = 5
+  const pattern = Array.from({ length: 100 * 100 }).fill(false)
+  const startRow = 45
+  const startCol = 45
 
   // 宇宙飞船形状
   const spaceship = [
@@ -226,7 +226,7 @@ function createSpaceshipPattern(): boolean[] {
   ]
 
   for (const [row, col] of spaceship) {
-    const index = (startRow + row) * 20 + (startCol + col)
+    const index = (startRow + row) * 100 + (startCol + col)
     pattern[index] = true
   }
 
@@ -235,50 +235,50 @@ function createSpaceshipPattern(): boolean[] {
 
 // 创建高斯滑翔机炮模式
 function createGosperGliderGunPattern(): boolean[] {
-  const pattern = Array.from({ length: 30 * 30 }).fill(false)
+  const pattern = Array.from({ length: 100 * 100 }).fill(false)
 
   // 高斯滑翔机炮形状
   const gosperGliderGun = [
-    [0, 24],
-    [1, 22],
-    [1, 24],
-    [2, 12],
-    [2, 13],
-    [2, 20],
-    [2, 21],
-    [2, 34],
-    [2, 35],
-    [3, 11],
-    [3, 15],
-    [3, 20],
-    [3, 21],
-    [3, 34],
-    [3, 35],
-    [4, 0],
-    [4, 1],
-    [4, 10],
-    [4, 16],
-    [4, 20],
-    [4, 21],
-    [5, 0],
-    [5, 1],
-    [5, 10],
-    [5, 14],
-    [5, 16],
-    [5, 17],
-    [5, 22],
-    [5, 24],
-    [6, 10],
-    [6, 16],
-    [6, 24],
-    [7, 11],
-    [7, 15],
-    [8, 12],
-    [8, 13],
+    [40, 40],
+    [41, 38],
+    [41, 40],
+    [42, 28],
+    [42, 29],
+    [42, 36],
+    [42, 37],
+    [42, 50],
+    [42, 51],
+    [43, 27],
+    [43, 31],
+    [43, 36],
+    [43, 37],
+    [43, 50],
+    [43, 51],
+    [44, 16],
+    [44, 17],
+    [44, 26],
+    [44, 32],
+    [44, 36],
+    [44, 37],
+    [45, 16],
+    [45, 17],
+    [45, 26],
+    [45, 30],
+    [45, 32],
+    [45, 33],
+    [45, 38],
+    [45, 40],
+    [46, 26],
+    [46, 32],
+    [46, 40],
+    [47, 27],
+    [47, 31],
+    [48, 28],
+    [48, 29],
   ]
 
   for (const [row, col] of gosperGliderGun) {
-    const index = row * 30 + col
+    const index = row * 100 + col
     pattern[index] = true
   }
 
