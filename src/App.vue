@@ -9,7 +9,7 @@ function switchLanguage(lang: string) {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-100">
+  <div class="bg-gray-100">
     <nav class="bg-white shadow-md">
       <div class="container mx-auto px-4 py-3">
         <div class="flex justify-between items-center">

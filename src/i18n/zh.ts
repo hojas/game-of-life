@@ -35,6 +35,42 @@ export default {
       name: '高斯滑翔机炮',
       description: '一个持续产生滑翔机的模式',
     },
+    rPentomino: {
+      name: 'R-五连块',
+      description: '一个著名的模式，会演变成复杂的结构',
+    },
+    diehard: {
+      name: '艰难生存',
+      description: '一个需要 130 代才会消失的模式',
+    },
+    acorn: {
+      name: '橡子',
+      description: '一个会产生大量细胞的模式',
+    },
+    queenBeeShuttle: {
+      name: '蜂王穿梭',
+      description: '一个来回穿梭的振荡器',
+    },
+    loaf: {
+      name: '面包',
+      description: '一个静物模式',
+    },
+    boat: {
+      name: '小船',
+      description: '一个静物模式',
+    },
+    tub: {
+      name: '浴缸',
+      description: '一个静物模式',
+    },
+    middleweightSpaceship: {
+      name: '中量级宇宙飞船',
+      description: '一个中等大小的宇宙飞船',
+    },
+    heavyweightSpaceship: {
+      name: '重量级宇宙飞船',
+      description: '一个大型宇宙飞船',
+    },
   },
   gameDetail: {
     backToGallery: '返回画廊',

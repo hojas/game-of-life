@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 
-const gridSize = ref(100)
+const gridSize = ref(50)
 const speed = ref(200)
 const isRunning = ref(false)
 const generation = ref(0)
@@ -129,7 +129,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+  <div class="bg-gray-100 flex flex-col items-center justify-center p-4">
     <h1 class="text-4xl font-bold mb-6 text-gray-800">
       {{ $t('home.title') }}
     </h1>
@@ -187,6 +187,9 @@ onUnmounted(() => {
               </option>
               <option value="40">
                 40x40
+              </option>
+              <option value="50">
+                50x50
               </option>
               <option value="100">
                 100x100
