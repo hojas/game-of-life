@@ -276,7 +276,7 @@ function navigateToGame(id: string) {
 <template>
   <div class="min-h-screen bg-gray-100 p-4">
     <h1 class="text-4xl font-bold mb-6 text-gray-800 text-center">
-      Game Gallery
+      {{ $t('gallery.title') }}
     </h1>
 
     <div class="container mx-auto max-w-6xl">
@@ -289,14 +289,14 @@ function navigateToGame(id: string) {
         >
           <div class="p-6">
             <h2 class="text-xl font-bold mb-2">
-              {{ game.name }}
+              {{ $t(`gallery.${game.id}.name`) }}
             </h2>
             <p class="text-gray-600 mb-4">
-              {{ game.description }}
+              {{ $t(`gallery.${game.id}.description`) }}
             </p>
             <div class="flex justify-end">
               <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
-                View Game
+                {{ $t('gallery.viewGame') }}
               </button>
             </div>
           </div>

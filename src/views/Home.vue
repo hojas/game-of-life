@@ -131,7 +131,7 @@ onUnmounted(() => {
 <template>
   <div class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
     <h1 class="text-4xl font-bold mb-6 text-gray-800">
-      Conway's Game of Life
+      {{ $t('home.title') }}
     </h1>
 
     <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-7xl">
@@ -142,26 +142,26 @@ onUnmounted(() => {
             :disabled="isRunning"
             @click="startGame"
           >
-            Start
+            {{ $t('home.start') }}
           </button>
           <button
             class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition"
             :disabled="!isRunning"
             @click="pauseGame"
           >
-            Pause
+            {{ $t('home.pause') }}
           </button>
           <button
             class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition"
             @click="resetGame"
           >
-            Reset
+            {{ $t('home.reset') }}
           </button>
         </div>
 
         <div class="flex items-center space-x-4">
           <div class="flex items-center">
-            <label class="mr-2 text-sm font-medium text-gray-700">Speed:</label>
+            <label class="mr-2 text-sm font-medium text-gray-700">{{ $t('home.speed') }}</label>
             <input
               v-model.number="speed"
               type="range"
@@ -174,7 +174,7 @@ onUnmounted(() => {
           </div>
 
           <div class="flex items-center">
-            <label class="mr-2 text-sm font-medium text-gray-700">Size:</label>
+            <label class="mr-2 text-sm font-medium text-gray-700">{{ $t('home.size') }}</label>
             <select v-model.number="gridSize" class="px-2 py-1 border rounded">
               <option value="10">
                 10x10
@@ -215,7 +215,7 @@ onUnmounted(() => {
       </div>
 
       <div class="mt-4 text-sm text-gray-600">
-        <p>Generation: {{ generation }}</p>
+        <p>{{ $t('home.generation') }} {{ generation }}</p>
       </div>
     </div>
   </div>

@@ -9,10 +9,10 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center space-x-4">
             <router-link to="/" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition">
-              Game of Life
+              {{ $t('nav.home') }}
             </router-link>
             <router-link to="/gallery" class="text-gray-600 hover:text-blue-600 transition">
-              Gallery
+              {{ $t('nav.gallery') }}
             </router-link>
           </div>
         </div>
