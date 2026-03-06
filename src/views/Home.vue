@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 
-const gridSize = ref(30)
+const gridSize = ref(100)
 const speed = ref(200)
 const isRunning = ref(false)
 const generation = ref(0)
-const cellSize = ref(16)
+const cellSize = ref(8)
 let intervalId: number | null = null
 
 const grid = ref<boolean[]>([])
@@ -187,6 +187,9 @@ onUnmounted(() => {
               </option>
               <option value="40">
                 40x40
+              </option>
+              <option value="100">
+                100x100
               </option>
             </select>
           </div>
