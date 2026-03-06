@@ -193,7 +193,7 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <div class="overflow-auto">
+      <div class="overflow-auto flex justify-center">
         <div
           class="grid gap-0.5 bg-gray-300 p-1"
           :style="{
