@@ -14,13 +14,16 @@ function switchLanguage(lang: string) {
       <div class="container mx-auto px-4 py-3">
         <div class="flex justify-between items-center">
           <div class="flex items-center space-x-4">
-            <router-link to="/" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition">
-              {{ $t('nav.home') }}
-            </router-link>
-            <router-link to="/gallery" class="text-gray-600 hover:text-blue-600 transition">
-              {{ $t('nav.gallery') }}
-            </router-link>
-          </div>
+          <router-link to="/" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition">
+            {{ $t('nav.home') }}
+          </router-link>
+          <router-link to="/gallery" class="text-gray-600 hover:text-blue-600 transition">
+            {{ $t('nav.gallery') }}
+          </router-link>
+          <router-link to="/about" class="text-gray-600 hover:text-blue-600 transition">
+            {{ $t('nav.about') }}
+          </router-link>
+        </div>
           <div class="flex items-center">
             <button
               class="px-3 py-1 mr-2 rounded hover:bg-gray-200 transition"
