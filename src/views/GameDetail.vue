@@ -406,7 +406,7 @@ onUnmounted(() => {
       {{ game?.name }}
     </h1>
 
-    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-7xl">
       <div class="flex flex-wrap justify-between items-center mb-4">
         <div class="flex space-x-2 mb-2 sm:mb-0">
           <button
