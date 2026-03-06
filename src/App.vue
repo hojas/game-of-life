@@ -1,5 +1,11 @@
 <script setup lang="ts">
-// App component with router setup
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n()
+
+function switchLanguage(lang: string) {
+  locale.value = lang
+}
 </script>
 
 <template>
@@ -14,6 +20,22 @@
             <router-link to="/gallery" class="text-gray-600 hover:text-blue-600 transition">
               {{ $t('nav.gallery') }}
             </router-link>
+          </div>
+          <div class="flex items-center">
+            <button
+              class="px-3 py-1 mr-2 rounded hover:bg-gray-200 transition"
+              :class="{ 'bg-gray-200': $i18n.locale === 'zh' }"
+              @click="switchLanguage('zh')"
+            >
+              中文
+            </button>
+            <button
+              class="px-3 py-1 rounded hover:bg-gray-200 transition"
+              :class="{ 'bg-gray-200': $i18n.locale === 'en' }"
+              @click="switchLanguage('en')"
+            >
+              English
+            </button>
           </div>
         </div>
       </div>
