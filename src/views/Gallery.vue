@@ -121,7 +121,7 @@ const games: GamePreset[] = [
 
 // 创建滑翔机模式
 function createGliderPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 22
   const startCol = 22
   
@@ -144,7 +144,7 @@ function createGliderPattern(): boolean[] {
 
 // 创建闪烁器模式
 function createBlinkerPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 24
   const startCol = 23
   
@@ -159,7 +159,7 @@ function createBlinkerPattern(): boolean[] {
 
 // 创建信标模式
 function createBeaconPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 23
   const startCol = 23
 
@@ -183,7 +183,7 @@ function createBeaconPattern(): boolean[] {
 
 // 创建脉冲星模式
 function createPulsarPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const centerRow = 25
   const centerCol = 25
 
@@ -255,7 +255,7 @@ function createPulsarPattern(): boolean[] {
 
 // 创建宇宙飞船模式
 function createSpaceshipPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 22
   const startCol = 22
 
@@ -282,7 +282,7 @@ function createSpaceshipPattern(): boolean[] {
 
 // 创建高斯滑翔机炮模式
 function createGosperGliderGunPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
 
   // 高斯滑翔机炮形状
   const gosperGliderGun = [
@@ -334,7 +334,7 @@ function createGosperGliderGunPattern(): boolean[] {
 
 // 创建 R-pentomino 模式
 function createRPentominoPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 23
   const startCol = 23
 
@@ -357,7 +357,7 @@ function createRPentominoPattern(): boolean[] {
 
 // 创建 Diehard 模式
 function createDiehardPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 20
   const startCol = 20
 
@@ -382,7 +382,7 @@ function createDiehardPattern(): boolean[] {
 
 // 创建 Acorn 模式
 function createAcornPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 20
   const startCol = 20
 
@@ -407,7 +407,7 @@ function createAcornPattern(): boolean[] {
 
 // 创建 Queen Bee Shuttle 模式
 function createQueenBeeShuttlePattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 20
   const startCol = 15
 
@@ -445,7 +445,7 @@ function createQueenBeeShuttlePattern(): boolean[] {
 
 // 创建 Loaf 模式
 function createLoafPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 23
   const startCol = 23
 
@@ -470,7 +470,7 @@ function createLoafPattern(): boolean[] {
 
 // 创建 Boat 模式
 function createBoatPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 23
   const startCol = 23
 
@@ -493,7 +493,7 @@ function createBoatPattern(): boolean[] {
 
 // 创建 Tub 模式
 function createTubPattern(): boolean[] {
-  const pattern = Array.from({ length: 50 * 50 }).fill(false)
+  const pattern = Array.from({ length: 50 * 50 }).fill(false) as boolean[]
   const startRow = 23
   const startCol = 23
 
